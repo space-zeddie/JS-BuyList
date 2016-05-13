@@ -2,12 +2,67 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
+    <title>Кошик</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-<h1>Hello World</h1>
+    <div class="container">
+        <!-- The shopping cart -->
+        <div class="buylist">
+            <form>
+                <input type="text" name="item-name" value="Назва товару">
+                <input type="submit">
+            </form>
+            <div class="buy-item">
+                <span class="name">Помідори</span>
+                <button class="dec">-</button>
+                <input type="text" name="num-of-items" value="1">
+                <button class="inc">+</button>
+                <button class="bought-btn">Куплено</button>
+                <button class="remove-btn">x</button>
+            </div>
+            <div class="buy-item">
+                <span class="name">Печиво</span>
+                <button class="dec">-</button>
+                <input type="text" name="num-of-items" value="1">
+                <button class="inc">+</button>
+                <button class="bought-btn">Куплено</button>
+                <button class="remove-btn">x</button>
+            </div>
+            <div class="buy-item">
+                <span class="name">Сир</span>
+                <button class="dec">-</button>
+                <input type="text" name="num-of-items" value="1">
+                <button class="inc">+</button>
+                <button class="bought-btn">Куплено</button>
+                <button class="remove-btn">x</button>
+            </div>
+        </div>
+    
+        <!-- Bought items and the ones that still need to be purchased -->
+        <div class="shopping-cart">
+            <div class="heading">
+                <h3>Залишилося</h3>
+            </div>
+            <div class="items">
+                <span class="item">
+                    Помідори
+                    <span class="number">1</span>
+                </span>
+                <span class="item">
+                    Печиво
+                    <span class="number">1</span>
+                </span>
+                <span class="item">
+                    Сир
+                    <span class="number">1</span>
+                </span>
+            </div>
+            <div class="heading">
+                <h3>Куплено</h3>
+            </div>
+            <div class="items"></div>
+        </div>
+    </div>
 </body>
 </html>
