@@ -9,11 +9,11 @@
     <div class="container">
         <!-- The shopping cart -->
         <div class="buylist">
-            <form>
+            <form class="row">
                 <input type="text" name="item-name" value="Назва товару">
                 <input type="submit">
             </form>
-            <div class="buy-item">
+            <div class="buy-item row">
                 <span class="name">Помідори</span>
                 <button class="dec">-</button>
                 <input type="text" name="num-of-items" value="1">
@@ -21,7 +21,7 @@
                 <button class="bought-btn">Куплено</button>
                 <button class="remove-btn">x</button>
             </div>
-            <div class="buy-item">
+            <div class="buy-item row">
                 <span class="name">Печиво</span>
                 <button class="dec">-</button>
                 <input type="text" name="num-of-items" value="1">
@@ -29,7 +29,7 @@
                 <button class="bought-btn">Куплено</button>
                 <button class="remove-btn">x</button>
             </div>
-            <div class="buy-item">
+            <div class="buy-item row">
                 <span class="name">Сир</span>
                 <button class="dec">-</button>
                 <input type="text" name="num-of-items" value="1">
@@ -41,10 +41,10 @@
     
         <!-- Bought items and the ones that still need to be purchased -->
         <div class="shopping-cart">
-            <div class="heading">
+            <div class="heading row">
                 <h3>Залишилося</h3>
             </div>
-            <div class="items">
+            <div class="items row">
                 <span class="item">
                     Помідори
                     <span class="number">1</span>
@@ -58,10 +58,10 @@
                     <span class="number">1</span>
                 </span>
             </div>
-            <div class="heading">
+            <div class="heading row">
                 <h3>Куплено</h3>
             </div>
-            <div class="items"></div>
+            <div class="items row"></div>
         </div>
     </div>
 </body>

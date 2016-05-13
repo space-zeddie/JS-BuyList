@@ -13,12 +13,14 @@ body
 {
     display: inline-block;
     margin: 0 auto;
+    background-color: white;
 }
 
 .shopping-cart
 {
     display: inline-block;
     margin: 0 auto;
-    padding-left: 35%;
+    margin-left: 35%;
+    background-color: white;
    /* float: right;*/
 }
