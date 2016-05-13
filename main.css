@@ -42,6 +42,16 @@ body
     padding: 10px;
 }
 
+input[name="item-name"]
+{
+    width: 77%;
+}
+
+input[type="submit"]
+{
+    background-color: cornflowerblue;
+}
+
 input[name="num-of-items"]
 {
     width: 5%;
@@ -52,4 +62,10 @@ input[name="num-of-items"]
     border: none;
     background-color: gainsboro;
     border-radius: 3px;
+}
+
+.group.right
+{
+    float: right;
+    padding-right: 25px;
 }
