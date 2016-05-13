@@ -19,7 +19,9 @@ body
     display: inline-block;
     margin: 0 auto;
     background-color: white;
-    padding: 5px 25px 4px 0px;
+    padding: 5px 25px 4px 0px;      
+    font-size: 13px;
+    border-radius: 3px;
 }
 
 .shopping-cart
@@ -29,14 +31,25 @@ body
     margin-left: 35%;
     padding: 0px 10px 4px 0px;
     background-color: white;
-   /* float: right;*/
+    border-radius: 3px;
 }
 
 .row
 {
     margin: 10px 0px;
-    border-bottom: 1px solid gray;
-    border-color: gainsboro;
+    border-bottom: 1px solid gainsboro;
     width: 106.5%;
     padding: 10px;
+}
+
+input[name="num-of-items"]
+{
+    width: 5%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 0;
+    border: none;
+    background-color: gainsboro;
+    border-radius: 3px;
 }
