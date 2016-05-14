@@ -133,3 +133,15 @@ input[name="num-of-items"]
 {
     width: 10%;
 }
+
+.group.right button
+{
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 8px 15px;
+    font-size: 10px;
+    color: darkslategrey;
+    background-color: #F2F2F2;
+    box-shadow: 0px 3px #C0C2C0;
+}
