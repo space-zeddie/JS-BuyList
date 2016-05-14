@@ -95,7 +95,38 @@ input[name="num-of-items"]
 .group.center
 {
     float: right;
-    padding-left: 30%;
+}
+
+.group.center input
+{
+    padding: 8px;
+    background-color: #E8E6E6;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.group.center button
+{
+    border: none;
+    border-radius: 20px;
+    padding: 7px 11px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 2px #960000;
+}
+
+.group.center .inc
+{
+    background-color: green;
+    box-shadow: 0px 2px #0F6304;
+}
+
+.group.center .dec
+{
+    background-color: #E82E2E;
+    padding: 7px 13px;
 }
 
 .name
