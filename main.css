@@ -80,6 +80,12 @@ input[name="num-of-items"]
     border-radius: 3px;
 }
 
+.half-row
+{
+    width: 65%;
+    display: inline-block;
+}
+
 .group.right
 {
     float: right;
@@ -88,6 +94,7 @@ input[name="num-of-items"]
 
 .group.center
 {
+    float: right;
     padding-left: 30%;
 }
 
