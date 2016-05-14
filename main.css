@@ -145,3 +145,13 @@ input[name="num-of-items"]
     background-color: #F2F2F2;
     box-shadow: 0px 3px #C0C2C0;
 }
+
+.group.right .remove-btn
+{
+    background-color: #D92B2B;
+    border: none;
+    padding: 8px 12px;
+    box-shadow: 0px 3px #C91414;
+    font-size: 11px;
+    color: white;
+}
