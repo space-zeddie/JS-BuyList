@@ -55,9 +55,9 @@ input[name="item-name"]
 
 input[type="submit"]
 {
-    background-color: cornflowerblue;
+    background-color: #147CC7;
     width: 12%;
-    padding: 10px;
+    padding: 8px 12px 5px 12px;
     margin: 5px 0;
     border: 1px solid rgba(0,0,0,0);
     margin-left: -15px;
@@ -66,6 +66,7 @@ input[type="submit"]
     font-size: 15px;
     border-top-right-radius: 3x; 
     border-bottom-right-radius: 3px;
+    box-shadow: 0px 5px #106FB3;
 }
 
 input[name="num-of-items"]
@@ -114,7 +115,7 @@ input[name="num-of-items"]
     font-size: 15px;
     font-weight: bold;
     color: white;
-    box-shadow: 0px 2px #960000;
+    box-shadow: 0px 2px #C91414;
 }
 
 .group.center .inc
@@ -125,7 +126,7 @@ input[name="num-of-items"]
 
 .group.center .dec
 {
-    background-color: #E82E2E;
+    background-color: #D92B2B;
     padding: 7px 13px;
 }
 
