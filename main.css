@@ -59,11 +59,13 @@ input[type="submit"]
     width: 12%;
     padding: 10px;
     margin: 5px 0;
-    border: none;
+    border: 1px solid rgba(0,0,0,0);
     margin-left: -15px;
     color: white;
     font-weight: bold;
     font-size: 15px;
+    border-top-right-radius: 3x; 
+    border-bottom-right-radius: 3px;
 }
 
 input[name="num-of-items"]
@@ -82,4 +84,14 @@ input[name="num-of-items"]
 {
     float: right;
     padding-right: 50px;
+}
+
+.group.center
+{
+    padding-left: 30%;
+}
+
+.name
+{
+    width: 10%;
 }
