@@ -31,10 +31,11 @@ body
     display: inline-block;
     position: absolute;
     margin-left: 30px;
-    padding: 0px 10px 4px 0px;
+    padding: 0px 10px 0px 0px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 3px 3px 10px 1px #C0C1C2;
+    width: 24%;
 }
 
 .row
@@ -161,5 +162,40 @@ input[name="num-of-items"]
     padding: 8px 13px;
     box-shadow: 0px 3px #C91414;
     font-size: 11px;
+    color: white;
+}
+
+.heading.row
+{
+    padding: 0px;
+    
+}
+
+.row h3
+{
+    padding: 2px 10px 4px 10px;
+}
+
+.items.row
+{
+    padding: 20px 0px 24px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    color: darkslategray;    
+}
+
+.item
+{
+    background-color: gainsboro;
+    margin: 3px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.number
+{
+    background-color: orange;
+    padding: 4.5px 7px;
+    border-radius: 10px;
     color: white;
 }
