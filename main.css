@@ -75,6 +75,7 @@ input[type="submit"]
 input[type="submit"]:hover
 {
     background-color: #1271B5;
+    box-shadow: 0px 5px #0F6099;
 }
 
 input[name="num-of-items"]
@@ -127,6 +128,13 @@ input[name="num-of-items"]
     box-shadow: 0px 2px #C91414;
 }
 
+.group.right .bought-btn:hover
+{
+    background-color: #CACBCC;
+    box-shadow: 0px 3px #C0C2C0;
+    border-bottom: none;
+}
+
 .group.center .inc
 {
     background-color: green;
@@ -168,6 +176,18 @@ input[name="num-of-items"]
     box-shadow: 0px 3px #C91414;
     font-size: 11px;
     color: white;
+}
+
+.group.right .remove-btn:hover, .group.center .dec:hover
+{
+    background-color: #BA2525;
+    box-shadow: 0px 3px #A12020;
+}
+
+.group.center .inc:hover
+{
+    background-color: #0F6304;
+    box-shadow: 0px 3px #0B4703;
 }
 
 .heading.row
