@@ -72,6 +72,11 @@ input[type="submit"]
     box-shadow: 0px 5px #106FB3;
 }
 
+input[type="submit"]:hover
+{
+    background-color: #1271B5;
+}
+
 input[name="num-of-items"]
 {
     width: 5%;
