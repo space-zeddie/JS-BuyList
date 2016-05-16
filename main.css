@@ -231,7 +231,26 @@ input[name="num-of-items"]
 
 }
 
-@media screen and (max-width: 880px)
+@media screen and (max-width: 780px)
 {
+    .container
+    {
+        padding; 10px 0px;
+    }
     
+    .buylist
+    {
+        width: 100%;
+    }
+    
+    
+    .half-row
+    {
+        width: 69%;
+        padding: 0px;
+    }
+    .group.center button
+    {
+        width: 30px;
+    }
 }
