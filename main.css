@@ -231,18 +231,14 @@ input[name="num-of-items"]
 
 }
 
-@media screen and (max-width: 780px)
+@media screen and (max-width: 880px)
 {
     .container
     {
         padding; 10px 0px;
     }
     
-    .buylist
-    {
-        width: 100%;
-    }
-    
+   
     
     .half-row
     {
@@ -252,5 +248,58 @@ input[name="num-of-items"]
     .group.center button
     {
         width: 30px;
+    }
+    
+    .group.right
+    {
+        position: absolute;
+    }
+    .group.center
+    {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .group.center
+    {
+        position: absolute;
+    }
+    
+    input[name="item-name"]
+    {
+        width: 67%;
+    }
+    .buylist
+    {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 560px)
+{
+    input[name="item-name"]
+    {
+        width: 54%;
+    }
+    
+    .group.right button
+    {
+        padding: 8px 8px;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .group.right .remove-btn
+    {
+        padding: 8px 3px;
+    }
+    .buylist
+    {
+        width: 120%;
+        margin: 0;
     }
 }
