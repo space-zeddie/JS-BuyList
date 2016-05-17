@@ -24,15 +24,25 @@ $(function () {
         var $name = $node.find('.half-row .name');
         var $incBtn = $node.find('.half-row .group.center .inc');
         var $decBtn = $node.find('.half-row .group.center .dec');
+        var $num = $node.find('.half-row .group.center input[name="num-of-items"]');
         
         $name.text(name);
         
         // TODO add delete logic here
         
-        $buylist.append($node);
-        console.log($incBtn);
         $incBtn.addClass('muted-green');
         $decBtn.addClass('muted-red');
+        
+        $incBtn.click(function (e) {
+            if ($incBtn.hasClass('muted-green'))
+               $incBtn.removeClass('muted-green');
+            if ($decBtn.hasClass('muted-red'))
+               $decBtn.removeClass('muted-red');
+            $num.val(parseInt($num.val()) + 1);
+        });
+        
+        $buylist.append($node);
+    
     }
     
     $addBtn.click(function (e) {
