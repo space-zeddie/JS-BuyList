@@ -34,4 +34,10 @@ $(function () {
         e.preventDefault();
         addItem($textField.val());
     });
+    
+    
+    // default items
+    addItem('Помідори');
+    addItem('Печиво');
+    addItem('Сир');
 });
