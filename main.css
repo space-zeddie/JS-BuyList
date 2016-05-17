@@ -228,6 +228,18 @@ input[name="num-of-items"]
     color: white;
 }
 
+.muted-green
+{
+    background-color: #64A85B !important;
+    box-shadow: 0px 2px #5D8558 !important;
+}
+
+.muted-red
+{
+    background-color: #D68181 !important;
+    box-shadow: 0px 3px #C47272 !important;
+}
+
 @media screen and (max-width: 950px)
 {
     .container

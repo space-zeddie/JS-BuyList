@@ -21,13 +21,18 @@ $(function () {
     
     function addItem(name) {
         var $node = $(ITEM_TEMPLATE);
-        var $name = $node.find('.half-row').find('.name');
+        var $name = $node.find('.half-row .name');
+        var $incBtn = $node.find('.half-row .group.center .inc');
+        var $decBtn = $node.find('.half-row .group.center .dec');
         
         $name.text(name);
         
         // TODO add delete logic here
         
         $buylist.append($node);
+        console.log($incBtn);
+        $incBtn.addClass('muted-green');
+        $decBtn.addClass('muted-red');
     }
     
     $addBtn.click(function (e) {
