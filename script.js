@@ -41,6 +41,16 @@ $(function () {
             $num.val(parseInt($num.val()) + 1);
         });
         
+        $decBtn.click(function (e) {
+            var n = parseInt($num.val()) - 1;
+            if (n < 1) return;
+            $num.val(n);
+            if (n <= 1) {
+               $incBtn.addClass('muted-green');
+               $decBtn.addClass('muted-red');  
+            }
+        });
+        
         $buylist.append($node);
     
     }
