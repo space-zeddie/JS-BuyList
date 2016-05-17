@@ -23,9 +23,6 @@ $(function () {
         var $node = $(ITEM_TEMPLATE);
         var $name = $node.find('.half-row').find('.name');
         
-        console.log($name.text());
-        
-       // $name.val(name);
         $name.text(name);
         
         // TODO add delete logic here
