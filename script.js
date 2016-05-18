@@ -27,6 +27,8 @@ $(function () {
     var $buylist = $('.buylist');
     var $addBtn = $('input[type="submit"]');
     var $textField = $('input[name="item-name"]');
+    var $boughtCheck = $('.items.row.bought');
+    var $leftCheck = $('.items.row.left');
     
     $textField.focusin(function (e) {
         if ($(this).val() === PLACEHOLDER)
@@ -38,13 +40,35 @@ $(function () {
             $(this).val(PLACEHOLDER);
     });
     
-    function checkItem(name, quantity, $where) {
+    function uncheckItem(name, quantity, id) {
         var $node = $(CHECK_TEMPLATE);
         var $number = $(NUMBER_TEMPLATE);
         $node.text(name);
+        $node.attr('id', 'i' + id);
         $node.append($number);
         $node.find('.number').text(quantity);
-        $where.append($node);
+        
+        var $checkedItem = $('#i' + id);
+        if ($checkedItem) 
+            $checkedItem.remove();
+        
+        $leftCheck.append($node);
+    }
+    
+    function checkItem(name, quantity, id) {
+        var $node = $(CHECK_TEMPLATE);
+        var $number = $(NUMBER_TEMPLATE);
+        $node.text(name);
+        $node.attr('id', 'i' + id);
+        $node.css('text-decoration', 'line-through');
+        $node.append($number);
+        $node.find('.number').text(quantity);
+        
+        var $uncheckedItem = $('#i' + id);
+        if ($uncheckedItem) 
+            $uncheckedItem.remove();
+        
+        $boughtCheck.append($node);
     }
     
     function addItem(name) {
@@ -56,8 +80,6 @@ $(function () {
         var $remBtn = $node.find('.group.right .remove-btn');
         var $num = $node.find('.half-row .group.center input[name="num-of-items"]');
         var ID = ++id;
-        
-        var $boughtCheck = $('.items.row.bought');
         
         $name.text(name);
         $node.attr('id', ID+'');
@@ -76,13 +98,14 @@ $(function () {
                 $remBtn.css('display', 'none');
                 $incBtn.css('visibility', 'hidden');
                 $decBtn.css('visibility', 'hidden');
-                checkItem(name, $num.val(), $boughtCheck);
+                checkItem(name, $num.val(), ID);
             } else {
                 $(this).text('Куплено');
                 $name.css('text-decoration', 'none');
                 $remBtn.css('display', 'initial');
                 $incBtn.css('visibility', 'visible');
                 $decBtn.css('visibility', 'visible');
+                uncheckItem(name, $num.val(), ID);
             }
         });
         
@@ -104,7 +127,8 @@ $(function () {
             }
         });
         
-        $buylist.append($node);    
+        $buylist.append($node);
+        uncheckItem(name, '1', ID);
     }
     
     $addBtn.click(function (e) {
