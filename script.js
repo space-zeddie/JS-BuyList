@@ -18,8 +18,8 @@ $(function () {
     var CHECK_TEMPLATE =
         '<span class="item">' +
             'Name' +
-            '<span class="number">0</span>' +
         '</span>';
+    var NUMBER_TEMPLATE = '<span class="number">0</span>';
     
     var PLACEHOLDER = 'Назва товару';
     var id = 0;
@@ -40,7 +40,9 @@ $(function () {
     
     function checkItem(name, quantity, $where) {
         var $node = $(CHECK_TEMPLATE);
+        var $number = $(NUMBER_TEMPLATE);
         $node.text(name);
+        $node.append($number);
         $node.find('.number').text(quantity);
         $where.append($node);
     }
@@ -54,6 +56,8 @@ $(function () {
         var $remBtn = $node.find('.group.right .remove-btn');
         var $num = $node.find('.half-row .group.center input[name="num-of-items"]');
         var ID = ++id;
+        
+        var $boughtCheck = $('.items.row.bought');
         
         $name.text(name);
         $node.attr('id', ID+'');
@@ -72,6 +76,7 @@ $(function () {
                 $remBtn.css('display', 'none');
                 $incBtn.css('visibility', 'hidden');
                 $decBtn.css('visibility', 'hidden');
+                checkItem(name, $num.val(), $boughtCheck);
             } else {
                 $(this).text('Куплено');
                 $name.css('text-decoration', 'none');

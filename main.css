@@ -226,6 +226,7 @@ input[name="num-of-items"]
     padding: 4.5px 7px;
     border-radius: 10px;
     color: white;
+    margin-left: 3px;
 }
 
 .muted-green
