@@ -26,7 +26,8 @@ $(function () {
     });
     
     $textField.focusout(function (e) {
-        $(this).val(PLACEHOLDER);
+        if ($(this).val() === '')
+            $(this).val(PLACEHOLDER);
     });
     
     function addItem(name) {
