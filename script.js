@@ -16,13 +16,15 @@ $(function () {
         '</div>';
     
     var PLACEHOLDER = 'Назва товару';
+    var id = 0;
     
     var $buylist = $('.buylist');
     var $addBtn = $('input[type="submit"]');
     var $textField = $('input[name="item-name"]');
     
     $textField.focusin(function (e) {
-        $(this).val('');
+        if ($(this).val() === PLACEHOLDER)
+            $(this).val('');
     });
     
     $textField.focusout(function (e) {
@@ -35,14 +37,20 @@ $(function () {
         var $name = $node.find('.half-row .name');
         var $incBtn = $node.find('.half-row .group.center .inc');
         var $decBtn = $node.find('.half-row .group.center .dec');
+        var $boughtBtn = $node.find('.group.right .bought-btn');
+        var $remBtn = $node.find('.group.right .remove-btn');
         var $num = $node.find('.half-row .group.center input[name="num-of-items"]');
+        var ID = ++id;
         
         $name.text(name);
-        
-        // TODO add delete logic here
+        $node.attr('id', ID+'');
         
         $incBtn.addClass('muted-green');
         $decBtn.addClass('muted-red');
+        
+        $remBtn.click(function (e) {
+            $('#' + ID).remove();
+        });
         
         $incBtn.click(function (e) {
             if ($incBtn.hasClass('muted-green'))
@@ -62,13 +70,13 @@ $(function () {
             }
         });
         
-        $buylist.append($node);
-    
+        $buylist.append($node);    
     }
     
     $addBtn.click(function (e) {
         e.preventDefault();
         addItem($textField.val());
+
     });
     
     
