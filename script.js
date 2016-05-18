@@ -134,7 +134,7 @@ $(function () {
     $addBtn.click(function (e) {
         e.preventDefault();
         addItem($textField.val());
-
+        $textField.val('');
     });
     
     
