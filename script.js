@@ -15,6 +15,12 @@ $(function () {
                 '</span>' +
         '</div>';
     
+    var CHECK_TEMPLATE =
+        '<span class="item">' +
+            'Name' +
+            '<span class="number">0</span>' +
+        '</span>';
+    
     var PLACEHOLDER = 'Назва товару';
     var id = 0;
     
@@ -31,6 +37,13 @@ $(function () {
         if ($(this).val() === '')
             $(this).val(PLACEHOLDER);
     });
+    
+    function checkItem(name, quantity, $where) {
+        var $node = $(CHECK_TEMPLATE);
+        $node.text(name);
+        $node.find('.number').text(quantity);
+        $where.append($node);
+    }
     
     function addItem(name) {
         var $node = $(ITEM_TEMPLATE);
@@ -50,6 +63,22 @@ $(function () {
         
         $remBtn.click(function (e) {
             $('#' + ID).remove();
+        });
+        
+        $boughtBtn.click(function (e) {
+            if ($(this).text() === 'Куплено') {
+                $(this).text('Не куплено');
+                $name.css('text-decoration', 'line-through');
+                $remBtn.css('display', 'none');
+                $incBtn.css('visibility', 'hidden');
+                $decBtn.css('visibility', 'hidden');
+            } else {
+                $(this).text('Куплено');
+                $name.css('text-decoration', 'none');
+                $remBtn.css('display', 'initial');
+                $incBtn.css('visibility', 'visible');
+                $decBtn.css('visibility', 'visible');
+            }
         });
         
         $incBtn.click(function (e) {
