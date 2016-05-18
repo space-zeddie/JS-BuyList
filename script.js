@@ -15,9 +15,19 @@ $(function () {
                 '</span>' +
         '</div>';
     
+    var PLACEHOLDER = 'Назва товару';
+    
     var $buylist = $('.buylist');
     var $addBtn = $('input[type="submit"]');
     var $textField = $('input[name="item-name"]');
+    
+    $textField.focusin(function (e) {
+        $(this).val('');
+    });
+    
+    $textField.focusout(function (e) {
+        $(this).val(PLACEHOLDER);
+    });
     
     function addItem(name) {
         var $node = $(ITEM_TEMPLATE);
