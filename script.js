@@ -97,6 +97,7 @@ $(function () {
             var $change = $(CHANGE_NAME_TEMPLATE);
             $change.val(currentName);
             $(this).append($change);
+            $change.focus();
         });
         
         $remBtn.click(function (e) {
