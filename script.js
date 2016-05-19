@@ -133,6 +133,7 @@ $(function () {
     
     $addBtn.click(function (e) {
         e.preventDefault();
+        if ($textField.val() === '' || $textField.val() === PLACEHOLDER) return;
         addItem($textField.val());
         $textField.val('');
     });
