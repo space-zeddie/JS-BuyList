@@ -209,7 +209,8 @@ input[name="num-of-items"]
     padding: 20px 0px 24px 5px;
     font-size: 10px;
     font-weight: bold;
-    color: darkslategray;    
+    color: darkslategray;
+    width: 100%;
 }
 
 .item
@@ -218,6 +219,7 @@ input[name="num-of-items"]
     margin: 3px;
     padding: 8px;
     border-radius: 4px;
+    display: inline-table;
 }
 
 .number
