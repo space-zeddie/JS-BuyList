@@ -20,6 +20,7 @@ $(function () {
             'Name' +
         '</span>';
     var NUMBER_TEMPLATE = '<span class="number">0</span>';
+    var CHANGE_NAME_TEMPLATE = '<input type="text" name="change-name" value="Name">';
     
     var PLACEHOLDER = 'Назва товару';
     var id = 0;
@@ -87,6 +88,15 @@ $(function () {
         $incBtn.addClass('muted-green');
         $decBtn.addClass('muted-red');
         
+        $name.click(function (e) {
+            var currentName = $name.text();
+            $name.text('');
+            var $change = $(CHANGE_NAME_TEMPLATE);
+            $change.val(currentName);
+            $name.append($change);
+           // $('.half-row').css('width', '60%');
+        });
+        
         $remBtn.click(function (e) {
             $('#' + ID).remove();
         });
@@ -137,7 +147,6 @@ $(function () {
         addItem($textField.val());
         $textField.val('');
     });
-    
     
     // default items
     addItem('Помідори');
