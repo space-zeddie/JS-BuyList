@@ -2,7 +2,7 @@ $(function () {
     var ITEM_TEMPLATE =
         '<div class="buy-item row">' +
                 '<div class="half-row">' +
-                    '<div class="name">Name</div>' +
+                    '<div class="name unchanged">Name</div>' +
                     '<span class="group center">' +
                         '<button class="dec">-</button>' +
                         '<input type="text" name="num-of-items" value="1" readonly>' +
@@ -89,12 +89,14 @@ $(function () {
         $decBtn.addClass('muted-red');
         
         $name.click(function (e) {
+            if ($(this).hasClass('changing')) return;
+            $(this).removeClass('unchanged');
+            $(this).addClass('changing');            
             var currentName = $name.text();
-            $name.text('');
+            $(this).text('');
             var $change = $(CHANGE_NAME_TEMPLATE);
             $change.val(currentName);
-            $name.append($change);
-           // $('.half-row').css('width', '60%');
+            $(this).append($change);
         });
         
         $remBtn.click(function (e) {
