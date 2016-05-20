@@ -114,7 +114,9 @@ $(function () {
         });
         
         $remBtn.click(function (e) {
-            $('#' + ID).remove();
+            $node.slideUp('slow', function (e) {
+               $('#' + ID).remove(); 
+            });
         });
         
         $boughtBtn.click(function (e) {
