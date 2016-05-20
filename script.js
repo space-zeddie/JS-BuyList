@@ -118,21 +118,24 @@ $(function () {
         });
         
         $boughtBtn.click(function (e) {
-            if ($(this).text() === 'Куплено') {
-                $(this).text('Не куплено');
-                $name.css('text-decoration', 'line-through');
-                $remBtn.css('display', 'none');
-                $incBtn.css('visibility', 'hidden');
-                $decBtn.css('visibility', 'hidden');
-                checkItem(name, $num.val(), ID);
-            } else {
-                $(this).text('Куплено');
-                $name.css('text-decoration', 'none');
-                $remBtn.css('display', 'initial');
-                $incBtn.css('visibility', 'visible');
-                $decBtn.css('visibility', 'visible');
-                uncheckItem(name, $num.val(), ID);
-            }
+            $node.fadeOut('slow', function (e) {
+                if ($boughtBtn.text() === 'Куплено') {
+                    $boughtBtn.text('Не куплено');
+                    $name.css('text-decoration', 'line-through');
+                    $remBtn.css('display', 'none');
+                    $incBtn.css('visibility', 'hidden');
+                    $decBtn.css('visibility', 'hidden');
+                    checkItem(name, $num.val(), ID);
+                } else {
+                    $boughtBtn.text('Куплено');
+                    $name.css('text-decoration', 'none');
+                    $remBtn.css('display', 'initial');
+                    $incBtn.css('visibility', 'visible');
+                    $decBtn.css('visibility', 'visible');
+                    uncheckItem(name, $num.val(), ID);
+                }
+                $node.fadeIn('slow');
+            });            
         });
         
         $incBtn.click(function (e) {
