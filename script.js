@@ -155,8 +155,9 @@ $(function () {
                $decBtn.addClass('muted-red');  
             }
         });
-        
+        $node.hide();
         $buylist.append($node);
+        $node.slideDown('slow');
         uncheckItem(name, '1', ID);
     }
     
