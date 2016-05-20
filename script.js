@@ -17,9 +17,9 @@ $(function () {
     
     var CHECK_TEMPLATE =
         '<span class="item">' +
-            'Name' +
+            '<span class="iname">Name</span>' +
+            '<span class="number">0</span>' +
         '</span>';
-    var NUMBER_TEMPLATE = '<span class="number">0</span>';
     var CHANGE_NAME_TEMPLATE = '<input type="text" name="change-name" value="Name">';
     
     var PLACEHOLDER = 'Назва товару';
@@ -43,10 +43,8 @@ $(function () {
     
     function uncheckItem(name, quantity, id) {
         var $node = $(CHECK_TEMPLATE);
-        var $number = $(NUMBER_TEMPLATE);
-        $node.text(name);
         $node.attr('id', 'i' + id);
-        $node.append($number);
+        $node.find('.iname').text(name);
         $node.find('.number').text(quantity);
         
         var $checkedItem = $('#i' + id);
@@ -58,11 +56,9 @@ $(function () {
     
     function checkItem(name, quantity, id) {
         var $node = $(CHECK_TEMPLATE);
-        var $number = $(NUMBER_TEMPLATE);
-        $node.text(name);
         $node.attr('id', 'i' + id);
+        $node.find('.iname').text(name);
         $node.css('text-decoration', 'line-through');
-        $node.append($number);
         $node.find('.number').text(quantity);
         
         var $uncheckedItem = $('#i' + id);
@@ -100,6 +96,7 @@ $(function () {
                 var newName = $change.val() === '' ? currentName : $change.val();
                 $change.remove();
                 $name.text(newName);
+                $('#i' + ID + ' .iname').text(newName);
                 $name.removeClass('changing');
             }
             
@@ -128,14 +125,14 @@ $(function () {
                     $remBtn.css('display', 'none');
                     $incBtn.css('visibility', 'hidden');
                     $decBtn.css('visibility', 'hidden');
-                    checkItem(name, $num.val(), ID);
+                    checkItem($name.text(), $num.val(), ID);
                 } else {
                     $boughtBtn.text('Куплено');
                     $name.css('text-decoration', 'none');
                     $remBtn.css('display', 'initial');
                     $incBtn.css('visibility', 'visible');
                     $decBtn.css('visibility', 'visible');
-                    uncheckItem(name, $num.val(), ID);
+                    uncheckItem($name.text(), $num.val(), ID);
                 }
                 $node.fadeIn('slow');
             });            
