@@ -147,17 +147,20 @@ $(function () {
             if ($decBtn.hasClass('muted-red'))
                $decBtn.removeClass('muted-red');
             $num.val(parseInt($num.val()) + 1);
+            $('#i' + ID + ' .number').text($num.val());
         });
         
         $decBtn.click(function (e) {
             var n = parseInt($num.val()) - 1;
             if (n < 1) return;
             $num.val(n);
+            $('#i' + ID + ' .number').text($num.val());
             if (n <= 1) {
                $incBtn.addClass('muted-green');
                $decBtn.addClass('muted-red');  
             }
         });
+        
         $node.hide();
         $buylist.append($node);
         $node.slideDown('slow');
