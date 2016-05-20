@@ -115,7 +115,8 @@ $(function () {
         
         $remBtn.click(function (e) {
             $node.slideUp('slow', function (e) {
-               $('#' + ID).remove(); 
+                $('#' + ID).remove();
+                $('#i' + ID).remove();
             });
         });
         
